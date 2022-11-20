@@ -19,6 +19,22 @@ public class MainBoard {
         return true;
     }
 
+    boolean checkWinner() {
+        // check row
+        for(int i = 0; i < size; i+=3) {
+            if(board[i].checkWinner() && board[i + 1].checkWinner() && board[i + 2].checkWinner()) {return true;}
+        }
+        // check column
+        for(int i = 0; i < 3; i++) {
+            if(board[i].checkWinner() && board[i + 3].checkWinner() && board[i + 6].checkWinner()) {return true;}
+        }
+        // check diagonal
+        if(board[0].checkWinner() && board[4].checkWinner() && board[8].checkWinner()) {return true;}
+        if(board[2].checkWinner() && board[4].checkWinner() && board[6].checkWinner()) {return true;}
+
+        return false;
+    }
+
     void print() {
         int startingBoard = 0;
         int startingBox = 0;
@@ -39,7 +55,5 @@ public class MainBoard {
                 startingBox += 3;
             }
         }
-
     }
-
 }

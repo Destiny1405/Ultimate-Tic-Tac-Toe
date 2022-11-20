@@ -25,9 +25,7 @@ public class Game {
             System.out.println(players[indexCurPlayer].getName() + "'s turn");
             makeMove();
 
-        } while(true);
-
-
+        } while(!board.isFull() && !board.checkWinner());
     }
 
     void makeMove() {
@@ -38,16 +36,13 @@ public class Game {
         do {
             System.out.print("Please enter a valid board number: ");
             boardNum = input.nextInt();
-        } while(boardNum < 0 || boardNum > 8);
+        } while(boardNum < 0 || boardNum > 8 || board.getSmallBoard(boardNum).isFull());
 
         do {
             System.out.print("Please enter a valid box number: ");
             boxNum = input.nextInt();
-        } while(boardNum < 0 || boardNum > 8);
+        } while(boxNum < 0 || boxNum > 8 || board.getSmallBoard(boardNum).getBox(boxNum).isFull());
 
         board.getSmallBoard(boardNum).getBox(boxNum).setMark(players[indexCurPlayer].getMark());
-
     }
-
-
 }
