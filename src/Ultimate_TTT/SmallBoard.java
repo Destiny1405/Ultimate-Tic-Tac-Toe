@@ -19,26 +19,26 @@ public class SmallBoard {
         return true;
     }
 
-    boolean checkWinner() {
+    char checkWinner() {
         // check row
         for(int i = 0; i < size; i += 3) {
             if((board[i].getMark() != '-') && (board[i].getMark() == board[i + 1].getMark()) && (board[i].getMark() == board[i + 2].getMark())) {
-                return true;
+                return board[i].getMark();
             }
         }
         // check column
         for(int i = 0; i < 3; i++) {
             if((board[i].getMark() != '-') && (board[i].getMark() == board[i + 3].getMark()) && (board[i].getMark() == board[i + 6].getMark())) {
-                return true;
+                return board[i].getMark();
             }
         }
         // check diagonal
         if((board[0].getMark() != '-') && (board[0].getMark() == board[4].getMark()) && (board[0].getMark() == board[8].getMark())) {
-            return true;
+            return board[0].getMark();
         }
         if((board[2].getMark() != '-') && (board[2].getMark() == board[4].getMark()) && (board[2].getMark() == board[6].getMark())) {
-            return true;
+            return board[2].getMark();
         }
-        return false;
+        return '-';
     }
 }

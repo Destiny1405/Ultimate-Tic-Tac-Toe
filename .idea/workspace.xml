@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d51f0e5-96bb-431c-92c3-a39c6b6aeebc" name="Changes" comment="players can move">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/Game.java" afterDir="false" />
+    <list default="true" id="9d51f0e5-96bb-431c-92c3-a39c6b6aeebc" name="Changes" comment="check winner">
       <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/MainBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/MainBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/SmallBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/SmallBoard.java" afterDir="false" />
     </list>
@@ -47,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668973386028</updated>
-      <workItem from="1668973387617" duration="9217000" />
+      <workItem from="1668973387617" duration="10248000" />
     </task>
     <task id="LOCAL-00001" summary="players can move">
       <created>1668978618674</created>
@@ -56,7 +54,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668978618674</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="check winner">
+      <created>1668982752097</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668982752097</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +80,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="players can move" />
-    <option name="LAST_COMMIT_MESSAGE" value="players can move" />
+    <MESSAGE value="check winner" />
+    <option name="LAST_COMMIT_MESSAGE" value="check winner" />
   </component>
 </project>

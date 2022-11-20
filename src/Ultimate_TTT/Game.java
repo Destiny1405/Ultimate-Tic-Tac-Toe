@@ -18,14 +18,15 @@ public class Game {
 
     void start() {
         System.out.println("Game started...");
+        board.print();
 
         do {
-            board.print();
             indexCurPlayer = (indexCurPlayer != 0) ? 0 : 1;
             System.out.println(players[indexCurPlayer].getName() + "'s turn");
             makeMove();
-
+            board.print();
         } while(!board.isFull() && !board.checkWinner());
+        System.out.println(players[indexCurPlayer] + " wins!!");
     }
 
     void makeMove() {
