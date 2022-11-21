@@ -19,6 +19,7 @@ public class SmallBoard {
         return true;
     }
 
+    // Check winner of each small board. Return mark of winner
     char checkWinner() {
         // check row
         for(int i = 0; i < size; i += 3) {
