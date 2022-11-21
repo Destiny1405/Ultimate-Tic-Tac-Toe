@@ -14,8 +14,8 @@ public class Game {
     }
 
     void setPlayers() {
-        players[0] = new Player("Player X", 'X');
-        players[1] = new Player("Player O", 'O');
+        players[0] = new HumanPlayer("Player X", 'X');
+        players[1] = new ComputerPlayer("Player O", 'O');
     }
 
     void start() {
@@ -32,22 +32,8 @@ public class Game {
     }
 
     void makeMove() {
-        Scanner input = new Scanner(System.in);
-
-        if(boardNum == -1) {
-            do {
-                System.out.print("Please enter a valid board number: ");
-                boardNum = input.nextInt();
-            } while (boardNum < 0 || boardNum > 8);
-        } else {
-            boardNum = boxNum;
-            System.out.println("Board number is " + boxNum);
-        }
-
-        do {
-            System.out.print("Please enter a valid box number: ");
-            boxNum = input.nextInt();
-        } while(boxNum < 0 || boxNum > 8 || board.getSmallBoard(boardNum).getBox(boxNum).isFull());
+        boardNum = players[indexCurPlayer].selectBoardNum(boardNum,boxNum);
+        boxNum = players[indexCurPlayer].selectBoxNum(boardNum,boxNum,board);
 
         board.getSmallBoard(boardNum).getBox(boxNum).setMark(players[indexCurPlayer].getMark());
 

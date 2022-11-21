@@ -1,24 +1,24 @@
 package Ultimate_TTT;
 
-public class Player {
+public abstract class Player {
     private String name;
     private char mark;
 
     Player(String name, char mark) {
-        setName(name);
         setMark(mark);
+        setName(name);
     }
 
-    String getName() {
-        return name;
-    }
+    void setMark(char mark) {this.mark = mark;}
 
-    void setName(String name) {
-        this.name = name;
-    }
+    void setName(String name) {this.name = name;}
 
     char getMark() {return mark;}
 
-    void setMark(char mark) {this.mark = mark;}
+    String getName() {return name;}
+
+    abstract int selectBoardNum(int boardNum, int boxNum);
+
+    abstract int selectBoxNum(int boardNum, int boxNum, MainBoard board);
 
 }
