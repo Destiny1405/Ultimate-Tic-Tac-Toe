@@ -3,18 +3,14 @@ package Ultimate_TTT;
 public class MainBoard {
     private int size = 9;
     private SmallBoard[] board = new SmallBoard[size];
-    private char[] winners = new char[size];
 
     MainBoard() {
         for (int i = 0; i < size; i++) {
             board[i] = new SmallBoard();
-            winners[i] = '-';
         }
     }
 
     SmallBoard getSmallBoard(int boardNum) {return board[boardNum];}
-
-    char[] getWinners() {return winners;}
 
     boolean isFull() {
         for(int i = 0; i < size; i++) {
@@ -23,12 +19,44 @@ public class MainBoard {
         return true;
     }
 
-    void updateWinners() {
-        for(int i = 0; i < size; i++) {
-            if(winners[i] == '-') {
-                winners[i] = board[i].checkWinner();
+    boolean checkRow() {
+        for(int i = 0; i < size; i+=3) {
+            if (board[i].checkWinner() && board[i + 1].checkWinner() && board[i + 2].checkWinner()) {
+                if((board[i].getWinner() == board[i + 1].getWinner()) && board[i].getWinner() == board[i + 2].getWinner()) {
+                    return true;
+                }
             }
         }
+        return false;
+    }
+
+    boolean checkCol() {
+        for(int i = 0; i < 3; i++) {
+            if (board[i].checkWinner() && board[i + 3].checkWinner() && board[i + 6].checkWinner()) {
+                if((board[i].getWinner() == board[i + 3].getWinner()) && board[i].getWinner() == board[i + 6].getWinner()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    boolean checkDiagonal() {
+        if (board[0].checkWinner() && board[4].checkWinner() && board[8].checkWinner()) {
+            if((board[0].getWinner() == board[4].getWinner()) && board[0].getWinner() == board[8].getWinner()) {
+                return true;
+            }
+        }
+        if (board[2].checkWinner() && board[4].checkWinner() && board[6].checkWinner()) {
+            if((board[2].getWinner() == board[4].getWinner()) && board[2].getWinner() == board[6].getWinner()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    boolean checkWinner() {
+        return (checkRow() || checkCol() || checkDiagonal()) ? true : false;
     }
 
     void print() {

@@ -27,7 +27,7 @@ public class Game {
             System.out.println(players[indexCurPlayer].getName() + "'s turn");
             makeMove();
             board.print();
-        } while(!board.isFull() && !checkWinner());
+        } while(!board.isFull() && !board.checkWinner());
         System.out.println(players[indexCurPlayer].getName() + " wins!!");
     }
 
@@ -38,30 +38,5 @@ public class Game {
         board.getSmallBoard(boardNum).getBox(boxNum).setMark(players[indexCurPlayer].getMark());
 
         if(board.getSmallBoard(boxNum).isFull()) {boardNum = -1;}
-    }
-
-    boolean checkWinner() {
-        char[] winners = board.getWinners();
-        
-        // check row
-        for(int i = 0; i < 9; i += 3) {
-            if((winners[i] != '-') && (winners[i] == winners[i + 1]) && (winners[i] == winners[i + 2])) {
-                return true;
-            }
-        }
-        // check column
-        for(int i = 0; i < 3; i++) {
-            if((winners[i] != '-') && (winners[i] == winners[i + 3]) && (winners[i] == winners[i + 6])) {
-                return true;
-            }
-        }
-        // check diagonal
-        if((winners[0] != '-') && (winners[0] == winners[4]) && (winners[0] == winners[8])) {
-            return true;
-        }
-        if((winners[2] != '-') && (winners[2] == winners[4]) && (winners[2] == winners[6])) {
-            return true;
-        }
-        return false;
     }
 }
