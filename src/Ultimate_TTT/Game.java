@@ -15,8 +15,31 @@ public class Game {
     }
 
     void setPlayers() {
-        players[0] = new ComputerPlayer("Player X", 'X');
-        players[1] = new ComputerPlayer("Player O", 'O');
+        Scanner input = new Scanner(System.in);
+        int mode;
+
+        do {
+            System.out.println("Choose game mode:");
+            System.out.println("1. Player vs. Player");
+            System.out.println("2. Player vs. Computer");
+            System.out.println("3. Computer vs. Computer");
+            mode = input.nextInt();
+        } while(mode < 1 || mode > 3);
+
+        switch (mode) {
+            case 1:
+                players[0] = new HumanPlayer("Player X", 'X');
+                players[1] = new HumanPlayer("Player O", 'O');
+                break;
+            case 2:
+                players[0] = new HumanPlayer("Player X", 'X');
+                players[1] = new ComputerPlayer("Player O", 'O');
+                break;
+            case 3:
+                players[0] = new ComputerPlayer("Player X", 'X');
+                players[1] = new ComputerPlayer("Player O", 'O');
+                break;
+        }
     }
 
     void start() {
@@ -39,8 +62,8 @@ public class Game {
 
     void makeMove() {
         // get board number input and box number input
-        boardNum = players[indexCurPlayer].selectBoardNum(boardNum,boxNum,board);
-        boxNum = players[indexCurPlayer].selectBoxNum(boardNum,boxNum,board);
+        boardNum = players[indexCurPlayer].selectBoard(boardNum,boxNum,board);
+        boxNum = players[indexCurPlayer].selectBox(boardNum,boxNum,board);
 
         // set mark
         board.getSmallBoard(boardNum).getBox(boxNum).setMark(players[indexCurPlayer].getMark());

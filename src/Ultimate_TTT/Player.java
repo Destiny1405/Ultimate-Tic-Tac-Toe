@@ -19,8 +19,8 @@ public abstract class Player {
     String getName() {return name;}
 
     // abstract methods are overridden by subclasses
-    abstract int selectBoardNum(int boardNum, int boxNum, MainBoard board);
+    abstract int selectBoard(int boardNum, int boxNum, MainBoard board);
 
-    abstract int selectBoxNum(int boardNum, int boxNum, MainBoard board);
+    abstract int selectBox(int boardNum, int boxNum, MainBoard board);
 
 }

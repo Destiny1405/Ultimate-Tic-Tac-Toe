@@ -1,6 +1,9 @@
 package Ultimate_TTT;
 
 /*
+Name: Duyen Do
+Section: 001
+Test: use two computer players to test winning cases and use a human player to test input validation and specific scenario
 Analysis:
 Create an Ultimate TTT game with these features:
 - in each of the nine boxes of the original game, embed a smaller TTT game
@@ -26,6 +29,7 @@ board and to enter a valid box number
 small board and a valid box number is randomly generated
 
 Game implementation:
+- let the user decides game mode
 - create a MainBoard and an array of Player
 - create a do while loop to keep the game going until the main board is full or there is a winner
 - inside the loop, current player is switched and makeMove method is called to get inputs and place mark

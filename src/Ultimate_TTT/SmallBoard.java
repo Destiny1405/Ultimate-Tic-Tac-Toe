@@ -6,7 +6,7 @@ public class SmallBoard implements Board{
     boolean isWon = false;                          // keep track if there is a winner at the small board
     char winner = '-';                              // store winner of the small board
 
-    public SmallBoard() {
+     SmallBoard() {
         for(int i = 0; i < size; i++) {
             board[i] = new Box();
         }

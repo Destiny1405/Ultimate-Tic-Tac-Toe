@@ -6,7 +6,7 @@ public class ComputerPlayer extends Player {
     }
 
     // generate input for board number
-    int selectBoardNum(int boardNum, int boxNum, MainBoard board) {
+    int selectBoard(int boardNum, int boxNum, MainBoard board) {
         // if boardNum is -1, then the last player sent the current player to a filled small board
         // so the input will be randomly generated
         // else the current player has to choose the value of the last player's box number
@@ -23,7 +23,7 @@ public class ComputerPlayer extends Player {
     }
 
     // generate input for box number
-    int selectBoxNum(int boardNum, int boxNum, MainBoard board) {
+    int selectBox(int boardNum, int boxNum, MainBoard board) {
         // if the small box is filled, then generate input again
         do {
             boxNum = (int) (Math.random() * 9);

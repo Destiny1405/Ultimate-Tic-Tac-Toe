@@ -3,14 +3,14 @@ package Ultimate_TTT;
 import java.util.Scanner;
 
 public class HumanPlayer extends Player {
-    Scanner input = new Scanner(System.in);
+    private Scanner input = new Scanner(System.in);
 
     HumanPlayer(String name, char mark) {
         super(name,mark);
     }
 
     // get user input for board number
-    int selectBoardNum(int boardNum, int boxNum, MainBoard board) {
+    int selectBoard(int boardNum, int boxNum, MainBoard board) {
         // if boardNum is -1, then the last player sent the current player to a filled small board
         // so the player can pick any small board
         // else the current player has to choose the value of the last player's box number
@@ -29,7 +29,7 @@ public class HumanPlayer extends Player {
     }
 
     // get user input for box number
-    int selectBoxNum(int boardNum, int boxNum, MainBoard board) {
+    int selectBox(int boardNum, int boxNum, MainBoard board) {
         // if the user enters invalid input or the board picked is filled, get user input again
         do {
             System.out.print("Please enter a valid box number: ");
