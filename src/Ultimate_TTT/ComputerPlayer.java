@@ -5,9 +5,16 @@ public class ComputerPlayer extends Player {
         super(name,mark);
     }
 
-    int selectBoardNum(int boardNum, int boxNum) {
+    // generate input for board number
+    int selectBoardNum(int boardNum, int boxNum, MainBoard board) {
+        // if boardNum is -1, then the last player sent the current player to a filled small board
+        // so the input will be randomly generated
+        // else the current player has to choose the value of the last player's box number
         if(boardNum == -1) {
-            boardNum = (int) (Math.random() * 9);
+            // if the small board picked is filled, then generate input again
+             do {
+                 boardNum = (int) (Math.random() * 9);
+             } while(board.getSmallBoard(boardNum).isFull());
         } else {
             boardNum = boxNum;
         }
@@ -15,7 +22,9 @@ public class ComputerPlayer extends Player {
         return boardNum;
     }
 
+    // generate input for box number
     int selectBoxNum(int boardNum, int boxNum, MainBoard board) {
+        // if the small box is filled, then generate input again
         do {
             boxNum = (int) (Math.random() * 9);
         } while(board.getSmallBoard(boardNum).getBox(boxNum).isFull());

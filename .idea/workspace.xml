@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d51f0e5-96bb-431c-92c3-a39c6b6aeebc" name="Changes" comment="update winner check">
+    <list default="true" id="9d51f0e5-96bb-431c-92c3-a39c6b6aeebc" name="Changes" comment="update winner check 2">
+      <change afterPath="$PROJECT_DIR$/src/Ultimate_TTT/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/ComputerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/DriverMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/DriverMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/HumanPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/MainBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/MainBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ultimate_TTT/SmallBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ultimate_TTT/SmallBoard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +54,10 @@
       <option name="presentableId" value="Default" />
       <updated>1668973386028</updated>
       <workItem from="1668973387617" duration="24239000" />
-      <workItem from="1669234276302" duration="3407000" />
+      <workItem from="1669234276302" duration="3688000" />
+      <workItem from="1669260434297" duration="442000" />
+      <workItem from="1669417929453" duration="1245000" />
+      <workItem from="1669604079306" duration="8512000" />
     </task>
     <task id="LOCAL-00001" summary="players can move">
       <created>1668978618674</created>
@@ -93,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669069098745</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update winner check 2">
+      <created>1669237976799</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669237976799</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +132,7 @@
     <MESSAGE value="move condition" />
     <MESSAGE value="update players" />
     <MESSAGE value="update winner check" />
-    <option name="LAST_COMMIT_MESSAGE" value="update winner check" />
+    <MESSAGE value="update winner check 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update winner check 2" />
   </component>
 </project>

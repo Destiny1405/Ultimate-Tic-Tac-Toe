@@ -1,5 +1,6 @@
 package Ultimate_TTT;
 
+// abstract class for HumanPlayer and ComputerPlayer
 public abstract class Player {
     private String name;
     private char mark;
@@ -17,7 +18,8 @@ public abstract class Player {
 
     String getName() {return name;}
 
-    abstract int selectBoardNum(int boardNum, int boxNum);
+    // abstract methods are overridden by subclasses
+    abstract int selectBoardNum(int boardNum, int boxNum, MainBoard board);
 
     abstract int selectBoxNum(int boardNum, int boxNum, MainBoard board);
 
